@@ -118,15 +118,12 @@ async function waitForTargets(port, timeoutMs) {
 }
 
 async function loadPayload() {
-  const [css, template, art] = await Promise.all([
+  const [css, template] = await Promise.all([
     fs.readFile(path.join(root, "assets", "dream-skin.css"), "utf8"),
     fs.readFile(path.join(root, "assets", "renderer-inject.js"), "utf8"),
-    fs.readFile(path.join(root, "assets", "dream-reference.png")),
   ]);
-  const artDataUrl = `data:image/png;base64,${art.toString("base64")}`;
   return template
-    .replace("__DREAM_CSS_JSON__", JSON.stringify(css))
-    .replace("__DREAM_ART_JSON__", JSON.stringify(artDataUrl));
+    .replace("__DREAM_CSS_JSON__", JSON.stringify(css));
 }
 
 async function connectTarget(target) {
@@ -143,7 +140,6 @@ async function removeFromSession(session) {
     const state = window.__CODEX_DREAM_SKIN_STATE__;
     if (state?.cleanup) return state.cleanup();
     document.documentElement?.classList.remove('codex-dream-skin');
-    document.documentElement?.style.removeProperty('--dream-art');
     document.getElementById('codex-dream-skin-style')?.remove();
     document.getElementById('codex-dream-skin-chrome')?.remove();
     return true;

@@ -23,7 +23,7 @@ $body = $desktopMatch.Groups['body'].Value
 $settings = [ordered]@{
   appearanceTheme = 'appearanceTheme = "light"'
   appearanceLightCodeThemeId = 'appearanceLightCodeThemeId = "codex"'
-  appearanceLightChromeTheme = 'appearanceLightChromeTheme = { accent = "#B65CFF", contrast = 64, fonts = { code = "Cascadia Code", ui = "Microsoft YaHei UI" }, ink = "#4A235F", opaqueWindows = true, semanticColors = { diffAdded = "#BCE8CF", diffRemoved = "#F7B8CE", skill = "#C47BFF" }, surface = "#FFF4FA" }'
+  appearanceLightChromeTheme = 'appearanceLightChromeTheme = { accent = "#20B89F", contrast = 58, fonts = { code = "Cascadia Code", ui = "Microsoft YaHei UI" }, ink = "#273B3B", opaqueWindows = true, semanticColors = { diffAdded = "#BDEBD8", diffRemoved = "#FFD0C6", skill = "#55B7DC" }, surface = "#FFF9E9" }'
 }
 foreach ($key in $settings.Keys) {
   $pattern = "(?m)^$([regex]::Escape($key))\s*=.*$"
@@ -45,7 +45,7 @@ if (-not $NoShortcuts) {
     $shortcut.TargetPath = $powershell
     $shortcut.Arguments = "-NoProfile -ExecutionPolicy Bypass -File `"$startScript`" -Port $Port -RestartExisting"
     $shortcut.WorkingDirectory = $SkillRoot
-    $shortcut.Description = 'Launch Codex with the Dream/Fiona full interface skin'
+    $shortcut.Description = 'Launch Codex with the Inspiration Micro-Universe interface skin'
     $shortcut.Save()
   }
   $restore = $shell.CreateShortcut((Join-Path $desktop 'Codex Dream Skin - Restore.lnk'))
@@ -56,4 +56,4 @@ if (-not $NoShortcuts) {
   $restore.Save()
 }
 
-Write-Host 'Codex Dream Skin installed. Launch it with the created shortcut or start-dream-skin.ps1.'
+Write-Host 'Codex Inspiration Micro-Universe skin installed. Launch it with the created shortcut or start-dream-skin.ps1.'

@@ -1,19 +1,22 @@
 :root.codex-dream-skin {
   color-scheme: light !important;
-  --dream-ink: #4c2364;
-  --dream-purple: #8b3dce;
-  --dream-violet: #b45cff;
-  --dream-pink: #ff73bd;
-  --dream-blush: #fff3f9;
-  --dream-pearl: rgba(255, 251, 253, .92);
-  --dream-line: rgba(221, 122, 184, .42);
+  --dream-ink: #273b3b;
+  --dream-ink-soft: #49605c;
+  --dream-teal: #20b89f;
+  --dream-mint: #8edcc8;
+  --dream-coral: #f27a61;
+  --dream-yellow: #f3c84b;
+  --dream-blue: #55b7dc;
+  --dream-cream: #fff9e9;
+  --dream-paper: rgba(255, 253, 245, .94);
+  --dream-line: rgba(36, 157, 137, .30);
 }
 
 html.codex-dream-skin body {
   background:
-    radial-gradient(circle at 78% 2%, rgba(255, 184, 215, .66), transparent 25%),
-    radial-gradient(circle at 24% 12%, rgba(210, 171, 255, .48), transparent 28%),
-    linear-gradient(135deg, #fff9fc 0%, #fceef8 48%, #f3eafd 100%) !important;
+    radial-gradient(circle at 82% 3%, rgba(242, 200, 75, .24), transparent 24%),
+    radial-gradient(circle at 22% 10%, rgba(70, 183, 220, .16), transparent 27%),
+    linear-gradient(135deg, #fffdf6 0%, #fff8e8 52%, #eefaf4 100%) !important;
   color: var(--dream-ink) !important;
   font-family: "Microsoft YaHei UI", "Microsoft YaHei", system-ui, sans-serif !important;
 }
@@ -24,37 +27,35 @@ html.codex-dream-skin body::before {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: .34;
+  opacity: .44;
   background-image:
-    radial-gradient(circle, rgba(255,255,255,.98) 0 1px, transparent 2px),
-    radial-gradient(circle, rgba(250,151,211,.8) 0 1px, transparent 2px);
-  background-position: 0 0, 23px 31px;
-  background-size: 53px 53px, 67px 67px;
+    radial-gradient(circle, rgba(32, 184, 159, .44) 0 1px, transparent 1.7px),
+    radial-gradient(circle, rgba(242, 122, 97, .34) 0 1px, transparent 1.8px);
+  background-position: 0 0, 27px 34px;
+  background-size: 61px 61px, 79px 79px;
 }
 
 html.codex-dream-skin aside.app-shell-left-panel {
   background:
-    linear-gradient(180deg, rgba(255,250,253,.98), rgba(255,239,248,.96)) !important;
-  border: 1px solid rgba(229, 151, 198, .45) !important;
+    linear-gradient(180deg, rgba(255, 254, 247, .98), rgba(250, 247, 229, .97)) !important;
+  border: 1px solid rgba(224, 197, 112, .48) !important;
   border-left: 0 !important;
   border-radius: 0 20px 20px 0 !important;
-  box-shadow: 10px 0 32px rgba(142, 55, 147, .10), inset -1px 0 rgba(255,255,255,.9) !important;
+  box-shadow: 10px 0 32px rgba(52, 119, 106, .10), inset -1px 0 rgba(255,255,255,.95) !important;
   backdrop-filter: none !important;
   color: var(--dream-ink) !important;
 }
 
-html.codex-dream-skin aside.app-shell-left-panel nav {
-  background: transparent !important;
-}
+html.codex-dream-skin aside.app-shell-left-panel nav { background: transparent !important; }
 
 html.codex-dream-skin aside.app-shell-left-panel button {
-  color: #55266e !important;
+  color: #304a48 !important;
   transition: transform .16s ease, background .16s ease, box-shadow .16s ease !important;
 }
 
 html.codex-dream-skin aside.app-shell-left-panel button:hover {
-  background: linear-gradient(90deg, rgba(255,211,235,.72), rgba(221,194,255,.62)) !important;
-  box-shadow: inset 0 0 0 1px rgba(207,110,190,.22) !important;
+  background: linear-gradient(90deg, rgba(139, 220, 200, .34), rgba(255, 225, 119, .28)) !important;
+  box-shadow: inset 0 0 0 1px rgba(32, 184, 159, .18) !important;
   transform: translateX(1px);
 }
 
@@ -64,40 +65,40 @@ html.codex-dream-skin aside.app-shell-left-panel button[aria-label^="切换模�
   font-family: Georgia, "Times New Roman", serif !important;
   font-size: 20px !important;
   font-weight: 700 !important;
-  color: #7e36c3 !important;
-  text-shadow: 0 2px 10px rgba(255,89,183,.28);
+  color: #138c7a !important;
+  text-shadow: 0 2px 10px rgba(32, 184, 159, .20);
 }
 
 html.codex-dream-skin aside.app-shell-left-panel button[aria-label^="切换模式"]::after {
   content: "✦";
-  margin-left: 2px;
-  color: #f16ab5;
+  margin-left: 3px;
+  color: var(--dream-yellow);
 }
 
 html.codex-dream-skin aside.app-shell-left-panel [class~="bg-token-list-hover-background"],
 html.codex-dream-skin aside.app-shell-left-panel [aria-current="page"] {
-  background: linear-gradient(90deg, rgba(229,197,255,.78), rgba(255,202,231,.72)) !important;
-  border: 1px solid rgba(193,101,191,.30) !important;
-  box-shadow: 0 4px 16px rgba(146,70,162,.10) !important;
+  background: linear-gradient(90deg, rgba(139, 220, 200, .46), rgba(255, 230, 139, .38)) !important;
+  border: 1px solid rgba(32, 184, 159, .24) !important;
+  box-shadow: 0 4px 16px rgba(52, 119, 106, .10) !important;
 }
 
 html.codex-dream-skin main.main-surface {
   background:
-    radial-gradient(circle at 84% 10%, rgba(255,180,221,.34), transparent 30%),
-    radial-gradient(circle at 20% 0%, rgba(214,181,255,.25), transparent 26%),
-    linear-gradient(180deg, #fff8fc 0%, #fff3f9 100%) !important;
-  border: 1px solid rgba(232, 166, 208, .45) !important;
+    radial-gradient(circle at 86% 8%, rgba(243, 200, 75, .17), transparent 28%),
+    radial-gradient(circle at 18% 0%, rgba(85, 183, 220, .13), transparent 25%),
+    linear-gradient(180deg, #fffdf7 0%, #fff9e9 100%) !important;
+  border: 1px solid rgba(225, 199, 119, .42) !important;
   border-right: 0 !important;
   border-bottom: 0 !important;
   border-radius: 20px 0 0 0 !important;
-  box-shadow: inset 0 1px rgba(255,255,255,.95), -8px 0 30px rgba(142,55,147,.08) !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.96), -8px 0 30px rgba(52,119,106,.07) !important;
   overflow: hidden !important;
 }
 
 html.codex-dream-skin main.main-surface > header.app-header-tint {
   background:
-    linear-gradient(90deg, rgba(255,249,252,.95), rgba(255,227,243,.84), rgba(229,207,255,.78)) !important;
-  border-bottom: 1px solid rgba(229,151,198,.34) !important;
+    linear-gradient(90deg, rgba(255, 254, 247, .96), rgba(255, 246, 216, .88), rgba(223, 248, 239, .80)) !important;
+  border-bottom: 1px solid rgba(225, 199, 119, .34) !important;
   backdrop-filter: none !important;
 }
 
@@ -117,75 +118,81 @@ html.codex-dream-skin main.main-surface > header.app-header-tint {
   display: none;
   align-items: center;
   gap: 10px;
-  color: #7730ae;
+  color: #168c79;
   text-shadow: 0 1px 0 white;
 }
 
 #codex-dream-skin-chrome.dream-home-shell .dream-brand { display: flex; }
-.dream-brand .dream-note { font-size: 29px; color: #ba4dde; filter: drop-shadow(0 2px 4px rgba(255,102,190,.34)); }
+.dream-brand .dream-note { font-size: 27px; color: var(--dream-coral); filter: drop-shadow(0 2px 4px rgba(242,122,97,.22)); }
 .dream-brand b { display: block; font-size: 15px; letter-spacing: .04em; }
-.dream-brand small { display: block; margin-top: 1px; color: #9e58bd; font-size: 10px; letter-spacing: .03em; }
+.dream-brand small { display: block; margin-top: 1px; color: #6b827d; font-size: 10px; letter-spacing: .03em; }
 
 .dream-signature {
   position: absolute;
-  right: 92px;
-  top: 6px;
+  right: 90px;
+  top: 7px;
   display: none;
-  color: #ef73b8;
-  font: italic 20px/1.2 "Segoe Script", "Comic Sans MS", cursive;
-  text-shadow: 0 0 8px white, 0 2px 8px rgba(181,61,143,.24);
-  transform: rotate(-3deg);
+  padding: 4px 11px;
+  border: 1px solid rgba(242, 122, 97, .34);
+  border-radius: 999px;
+  background: rgba(255, 252, 237, .86);
+  color: #d85f49;
+  font: 600 12px/1.2 "Microsoft YaHei UI", sans-serif;
+  box-shadow: 0 3px 10px rgba(82, 104, 91, .10);
+  transform: rotate(-2deg);
 }
 #codex-dream-skin-chrome.dream-home-shell .dream-signature { display: block; }
 
-.dream-sparkles { position: absolute; inset: 48px 0 0; opacity: .72; }
-.dream-sparkles i { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: white; box-shadow: 0 0 10px 3px rgba(255,112,196,.66); }
-.dream-sparkles i::before, .dream-sparkles i::after { content: ""; position: absolute; left: 2px; top: -6px; width: 1px; height: 17px; background: linear-gradient(transparent, rgba(255,255,255,.95), transparent); }
-.dream-sparkles i::after { transform: rotate(90deg); }
-.dream-sparkles i:nth-child(1) { left: 7%; top: 11%; }
-.dream-sparkles i:nth-child(2) { left: 31%; top: 5%; opacity: .55; }
-.dream-sparkles i:nth-child(3) { left: 55%; top: 17%; opacity: .82; }
+.dream-sparkles { position: absolute; inset: 48px 0 0; opacity: .78; }
+.dream-sparkles i { position: absolute; width: 7px; height: 7px; border: 2px solid var(--dream-teal); border-radius: 2px; transform: rotate(45deg); }
+.dream-sparkles i:nth-child(1) { left: 7%; top: 11%; border-color: var(--dream-coral); }
+.dream-sparkles i:nth-child(2) { left: 31%; top: 5%; opacity: .55; border-color: var(--dream-yellow); }
+.dream-sparkles i:nth-child(3) { left: 55%; top: 17%; opacity: .82; border-color: var(--dream-blue); }
 .dream-sparkles i:nth-child(4) { left: 78%; top: 8%; opacity: .64; }
-.dream-sparkles i:nth-child(5) { left: 92%; top: 27%; opacity: .9; }
-.dream-sparkles i:nth-child(6) { left: 66%; top: 66%; opacity: .48; }
+.dream-sparkles i:nth-child(5) { left: 92%; top: 27%; opacity: .9; border-color: var(--dream-coral); }
+.dream-sparkles i:nth-child(6) { left: 66%; top: 66%; opacity: .48; border-color: var(--dream-yellow); }
 
-.dream-polaroid {
+.dream-sticker {
   position: absolute;
-  right: 11px;
-  bottom: 74px;
+  right: 14px;
+  bottom: 84px;
   width: 116px;
-  height: 150px;
+  min-height: 94px;
   display: none;
-  background-image: var(--dream-art);
-  background-size: 915% auto;
-  background-position: 100% 100%;
-  border: 7px solid rgba(255,253,253,.96);
-  border-bottom-width: 20px;
-  box-shadow: 0 9px 20px rgba(105,47,107,.22), 0 0 0 1px rgba(197,119,163,.26);
-  transform: rotate(-7deg);
-  border-radius: 2px;
+  place-items: center;
+  padding: 16px 12px 13px;
+  border: 1px solid rgba(225, 182, 67, .52);
+  border-radius: 6px;
+  background: linear-gradient(145deg, #fff8c8, #fff2a7);
+  color: #3a5a55;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.7;
+  text-align: center;
+  box-shadow: 0 10px 22px rgba(84, 104, 78, .16);
+  transform: rotate(4deg);
 }
-#codex-dream-skin-chrome.dream-home-shell .dream-polaroid { display: block; }
-.dream-polaroid::before { content: "🎀"; position: absolute; left: -21px; top: -24px; font-size: 32px; filter: drop-shadow(0 3px 4px rgba(151,66,119,.25)); }
+#codex-dream-skin-chrome.dream-home-shell .dream-sticker { display: grid; }
+.dream-sticker::before { content: ""; position: absolute; left: 36px; top: -8px; width: 45px; height: 15px; background: rgba(85, 183, 220, .32); transform: rotate(-5deg); }
 
 .dream-ribbon {
   position: absolute;
   left: 50%;
-  bottom: 68px;
+  bottom: 72px;
   display: none;
   align-items: center;
   gap: 8px;
-  color: #d54f9a;
-  font-size: 30px;
+  color: var(--dream-coral);
+  font-size: 27px;
   transform: translateX(-50%);
-  filter: drop-shadow(0 4px 5px rgba(166,66,137,.26));
+  filter: drop-shadow(0 4px 5px rgba(44, 124, 107, .14));
 }
 #codex-dream-skin-chrome.dream-home-shell .dream-ribbon { display: flex; }
-.dream-ribbon span { font-size: 15px; color: #c36dff; }
+.dream-ribbon span { font-size: 14px; color: var(--dream-teal); }
 
 html.codex-dream-skin [role="main"] {
   background: transparent !important;
-  scrollbar-color: rgba(190,91,192,.52) transparent;
+  scrollbar-color: rgba(32, 184, 159, .44) transparent;
 }
 
 html.codex-dream-skin .dream-home {
@@ -193,11 +200,7 @@ html.codex-dream-skin .dream-home {
   overflow-x: hidden !important;
 }
 
-.dream-home > div:first-child {
-  padding-top: 15px !important;
-  min-height: 100% !important;
-}
-
+.dream-home > div:first-child { padding-top: 15px !important; min-height: 100% !important; }
 .dream-home > div:first-child > div:first-child {
   flex: 0 0 430px !important;
   min-height: 430px !important;
@@ -214,16 +217,15 @@ html.codex-dream-skin .dream-home {
   min-height: 252px !important;
   flex: 0 1 auto !important;
   padding: 0 !important;
-  border: 2px solid rgba(255,193,221,.90) !important;
+  border: 2px solid rgba(60, 177, 154, .54) !important;
   border-radius: 25px !important;
-  overflow: visible !important;
-  background-image:
-    linear-gradient(90deg, rgba(113,50,178,.06), rgba(255,129,196,.05)),
-    var(--dream-art) !important;
-  background-repeat: no-repeat !important;
-  background-size: 100% 100%, auto 300% !important;
-  background-position: center, right 22% !important;
-  box-shadow: 0 14px 34px rgba(150,60,151,.20), inset 0 0 0 4px rgba(255,255,255,.20) !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(circle at 84% 28%, rgba(255,255,255,.86) 0 9%, transparent 10%),
+    radial-gradient(circle at 90% 76%, rgba(242,122,97,.25) 0 12%, transparent 13%),
+    radial-gradient(circle at 68% 82%, rgba(85,183,220,.22) 0 10%, transparent 11%),
+    linear-gradient(115deg, #fff8df 0%, #fffdf2 55%, #dff7ed 100%) !important;
+  box-shadow: 0 14px 34px rgba(56, 126, 111, .16), inset 0 0 0 4px rgba(255,255,255,.38) !important;
 }
 
 .dream-home > div:first-child > div:first-child > div:first-child::before {
@@ -231,10 +233,28 @@ html.codex-dream-skin .dream-home {
   position: absolute;
   z-index: 0;
   inset: 0 auto 0 0;
-  width: 58%;
+  width: 64%;
   border-radius: 23px 0 0 23px;
   pointer-events: none;
-  background: linear-gradient(90deg, rgba(90,38,154,.98) 0%, rgba(112,48,170,.94) 54%, rgba(130,56,179,.66) 78%, transparent 100%);
+  background:
+    linear-gradient(90deg, rgba(255,250,229,.99) 0%, rgba(255,251,235,.95) 70%, transparent 100%);
+}
+
+.dream-home > div:first-child > div:first-child > div:first-child::after {
+  content: "✦  ENFP 灵感小宇宙  ☄";
+  position: absolute;
+  z-index: 0;
+  right: 28px;
+  top: 43%;
+  width: 34%;
+  color: #168c79;
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-align: center;
+  text-shadow: 0 2px white;
+  transform: rotate(-3deg);
+  pointer-events: none;
 }
 
 .dream-home > div:first-child > div:first-child > div:first-child > div:first-child {
@@ -247,14 +267,12 @@ html.codex-dream-skin .dream-home {
 }
 
 .dream-home > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child {
-  width: 54% !important;
+  width: 55% !important;
   align-items: flex-start !important;
   gap: 0 !important;
 }
 
-.dream-home [data-testid="home-icon"] {
-  display: none !important;
-}
+.dream-home [data-testid="home-icon"] { display: none !important; }
 
 .dream-home [data-feature="game-source"] {
   display: flex !important;
@@ -262,43 +280,42 @@ html.codex-dream-skin .dream-home {
   align-items: flex-start !important;
   justify-content: flex-start !important;
   max-width: 100% !important;
-  color: white !important;
+  color: #263f3d !important;
   font-size: clamp(20px, 2vw, 30px) !important;
   line-height: 1.3 !important;
-  font-weight: 750 !important;
+  font-weight: 800 !important;
   text-align: left !important;
-  text-shadow: 0 2px 12px rgba(58,15,92,.42), 0 1px 0 rgba(255,255,255,.28);
+  text-shadow: 0 1px white;
   opacity: 1 !important;
   pointer-events: auto !important;
 }
 
 .dream-home [data-feature="game-source"]::after {
-  content: "与凯琪一起，把灵感写进每一天 ♡";
+  content: "先有灵感，再把它变成真的 ✦";
   display: block;
   margin-top: 13px;
-  color: rgba(255,248,255,.94);
+  color: #e16550;
   font-size: 15px;
   line-height: 1.5;
-  font-weight: 500;
-  letter-spacing: .02em;
+  font-weight: 600;
+  letter-spacing: .03em;
 }
 
 .dream-home [data-feature="game-source"] button {
   margin: 0 5px;
   padding: 2px 9px 3px;
-  border: 1px solid rgba(255,226,245,.72);
+  border: 1px solid rgba(32, 184, 159, .36);
   border-radius: 999px;
-  background: rgba(255,233,247,.22);
-  color: #ffe0f3 !important;
-  text-decoration-color: rgba(255,224,243,.72) !important;
+  background: rgba(139, 220, 200, .20);
+  color: #168c79 !important;
+  text-decoration-color: rgba(32, 184, 159, .42) !important;
   text-underline-offset: 5px;
-  box-shadow: inset 0 0 12px rgba(255,255,255,.10);
 }
 
 .dream-home [data-feature="game-source"] button::before {
-  content: "选择项目 · ";
+  content: "项目 · ";
   font-size: .48em;
-  font-weight: 600;
+  font-weight: 700;
   vertical-align: middle;
   opacity: .86;
 }
@@ -310,10 +327,7 @@ html.codex-dream-skin .dream-home {
   margin-top: 13px !important;
 }
 
-.dream-home .group\/home-suggestions {
-  overflow: visible !important;
-}
-
+.dream-home .group\/home-suggestions { overflow: visible !important; }
 .dream-home .group\/home-suggestions button {
   position: relative !important;
   min-height: 126px !important;
@@ -321,61 +335,59 @@ html.codex-dream-skin .dream-home {
   align-items: stretch !important;
   justify-content: flex-start !important;
   text-align: center !important;
-  border: 1px solid rgba(231,169,197,.82) !important;
+  border: 1px solid rgba(54, 157, 137, .36) !important;
   border-radius: 23px !important;
   background:
     radial-gradient(circle at 50% 25%, rgba(255,255,255,.96), transparent 34%),
-    linear-gradient(145deg, rgba(255,251,247,.96), rgba(255,237,246,.96)) !important;
-  color: #4d2567 !important;
-  font-weight: 600 !important;
+    linear-gradient(145deg, rgba(255,254,247,.98), rgba(239,250,244,.95)) !important;
+  color: #304a48 !important;
+  font-weight: 650 !important;
   line-height: 1.45 !important;
-  box-shadow: 0 8px 18px rgba(120,55,119,.11), inset 0 0 0 3px rgba(255,255,255,.50) !important;
+  box-shadow: 0 8px 18px rgba(62, 111, 97, .11), inset 0 0 0 3px rgba(255,255,255,.56) !important;
   transform: translateY(0);
   transition: transform .18s ease, box-shadow .18s ease !important;
 }
+.dream-home .group\/home-suggestions button:nth-child(2) { border-color: rgba(242,122,97,.38) !important; background: linear-gradient(145deg, #fffdf6, #fff1e8) !important; }
+.dream-home .group\/home-suggestions button:nth-child(3) { border-color: rgba(85,183,220,.40) !important; background: linear-gradient(145deg, #fffdf6, #eaf8fc) !important; }
+.dream-home .group\/home-suggestions button:nth-child(4) { border-color: rgba(225,182,67,.44) !important; background: linear-gradient(145deg, #fffdf6, #fff8d7) !important; }
 
 .dream-home .group\/home-suggestions button:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 13px 26px rgba(144,55,137,.18), 0 0 0 2px rgba(205,112,230,.16) !important;
+  transform: translateY(-4px) rotate(-.4deg) !important;
+  box-shadow: 0 13px 26px rgba(42, 117, 99, .17), 0 0 0 2px rgba(32,184,159,.12) !important;
 }
 
 .dream-home .group\/home-suggestions button > span:first-child > span:first-child {
-  width: 38px;
-  height: 38px;
+  width: 39px;
+  height: 39px;
   display: grid !important;
   place-items: center;
   margin: 0 auto;
-  border-radius: 50%;
+  border-radius: 14px;
   color: white !important;
-  background: linear-gradient(145deg, #f68ec6, #a14fe0);
-  box-shadow: 0 0 0 7px rgba(255,218,233,.64), 0 5px 12px rgba(142,61,152,.24);
+  background: linear-gradient(145deg, #45c9ad, #15977f);
+  box-shadow: 0 0 0 7px rgba(139,220,200,.28), 0 5px 12px rgba(42,117,99,.20);
+  transform: rotate(-5deg);
 }
-.dream-home .group\/home-suggestions button svg {
-  width: 21px !important;
-  height: 21px !important;
-  color: white !important;
-}
-.dream-home .group\/home-suggestions button > span:first-child {
-  justify-content: center !important;
-}
-.dream-home .group\/home-suggestions button > span:last-child {
-  align-items: center !important;
-  text-align: center !important;
-}
+.dream-home .group\/home-suggestions button:nth-child(2) > span:first-child > span:first-child { background: linear-gradient(145deg, #ff9b7f, #e7634e); box-shadow: 0 0 0 7px rgba(255,190,171,.28), 0 5px 12px rgba(151,82,61,.18); }
+.dream-home .group\/home-suggestions button:nth-child(3) > span:first-child > span:first-child { background: linear-gradient(145deg, #74cae9, #359cc7); box-shadow: 0 0 0 7px rgba(164,221,240,.30), 0 5px 12px rgba(53,130,159,.18); }
+.dream-home .group\/home-suggestions button:nth-child(4) > span:first-child > span:first-child { background: linear-gradient(145deg, #f9d96c, #e5ad2e); box-shadow: 0 0 0 7px rgba(255,230,142,.32), 0 5px 12px rgba(151,120,42,.18); }
+.dream-home .group\/home-suggestions button svg { width: 21px !important; height: 21px !important; color: white !important; }
+.dream-home .group\/home-suggestions button > span:first-child { justify-content: center !important; }
+.dream-home .group\/home-suggestions button > span:last-child { align-items: center !important; text-align: center !important; }
 
 html.codex-dream-skin .composer-surface-chrome {
-  border: 2px solid rgba(228,132,188,.58) !important;
+  border: 2px solid rgba(32, 184, 159, .48) !important;
   border-radius: 25px !important;
   background:
-    radial-gradient(circle at 88% 22%, rgba(255,255,255,.92), transparent 24%),
-    linear-gradient(145deg, rgba(255,252,253,.96), rgba(255,235,246,.94)) !important;
-  box-shadow: 0 10px 25px rgba(132,54,125,.15), inset 0 0 0 4px rgba(255,255,255,.45) !important;
+    radial-gradient(circle at 88% 22%, rgba(255,255,255,.94), transparent 24%),
+    linear-gradient(145deg, rgba(255,254,248,.97), rgba(239,250,244,.95)) !important;
+  box-shadow: 0 10px 25px rgba(53, 117, 101, .14), inset 0 0 0 4px rgba(255,255,255,.50) !important;
   backdrop-filter: none !important;
   overflow: visible !important;
 }
 
 html.codex-dream-skin .composer-surface-chrome::before {
-  content: "♡";
+  content: "✦";
   position: absolute;
   left: -13px;
   top: -13px;
@@ -386,57 +398,51 @@ html.codex-dream-skin .composer-surface-chrome::before {
   place-items: center;
   border-radius: 50%;
   color: white;
-  background: linear-gradient(145deg, #ff96c9, #af55df);
-  box-shadow: 0 4px 12px rgba(136,53,133,.22);
+  background: linear-gradient(145deg, #45c9ad, #15977f);
+  box-shadow: 0 4px 12px rgba(42,117,99,.20);
 }
 
 .dream-home div:has(> .horizontal-scroll-fade-mask .group\/project-selector) {
   position: relative;
   padding-top: 28px !important;
-  border: 1px solid rgba(227,148,195,.44);
+  border: 1px solid rgba(32, 184, 159, .30);
   border-bottom: 0;
-  background: linear-gradient(180deg, rgba(255,248,252,.94), rgba(255,233,246,.88)) !important;
+  background: linear-gradient(180deg, rgba(255,254,247,.96), rgba(239,250,244,.90)) !important;
 }
 
 .dream-home div:has(> .horizontal-scroll-fade-mask .group\/project-selector)::before {
-  content: "♡  选择项目";
+  content: "✦  灵感基地";
   position: absolute;
   left: 13px;
   top: 6px;
   z-index: 2;
-  color: #8e3fae;
+  color: #168c79;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 750;
   letter-spacing: .04em;
   text-shadow: 0 1px white;
   white-space: nowrap;
 }
 
 .dream-home .group\/project-selector > button {
-  border-color: rgba(199,111,189,.38) !important;
-  background: linear-gradient(135deg, rgba(255,255,255,.92), rgba(244,224,255,.86)) !important;
-  color: #6f3296 !important;
-  box-shadow: 0 3px 10px rgba(125,57,133,.10) !important;
+  border-color: rgba(32,184,159,.34) !important;
+  background: linear-gradient(135deg, rgba(255,255,255,.94), rgba(224,247,238,.88)) !important;
+  color: #168c79 !important;
+  box-shadow: 0 3px 10px rgba(42,117,99,.10) !important;
 }
 
-html.codex-dream-skin .ProseMirror {
-  color: #55266c !important;
-  caret-color: #b33fd2 !important;
-}
-
+html.codex-dream-skin .ProseMirror { color: #304a48 !important; caret-color: #168c79 !important; }
 html.codex-dream-skin button[class~="bg-token-foreground"] {
-  background: linear-gradient(145deg, #cf61f0, #a237ca) !important;
+  background: linear-gradient(145deg, #34c3a5, #138d77) !important;
   color: white !important;
-  box-shadow: 0 5px 12px rgba(158,54,176,.26) !important;
+  box-shadow: 0 5px 12px rgba(31,132,111,.24) !important;
 }
 
 html.codex-dream-skin article,
-html.codex-dream-skin [data-message-author-role] {
-  border-radius: 20px;
-}
+html.codex-dream-skin [data-message-author-role] { border-radius: 20px; }
 
 @media (max-width: 1120px) {
-  .dream-polaroid { display: none !important; }
+  .dream-sticker { display: none !important; }
   .dream-ribbon { bottom: 70px; font-size: 25px; }
   .dream-home { --thread-content-max-width: min(860px, calc(100cqw - 30px)) !important; }
   .dream-home > div:first-child > div:first-child > div:first-child { width: calc(100% - 28px) !important; }
@@ -447,14 +453,15 @@ html.codex-dream-skin [data-message-author-role] {
   .dream-brand { left: 15px; }
   .dream-brand b { font-size: 13px; }
   .dream-home > div:first-child > div:first-child { flex-basis: 396px !important; min-height: 396px !important; }
-  .dream-home > div:first-child > div:first-child > div:first-child { height: 224px !important; min-height: 224px !important; background-size: 100% 100%, auto 300% !important; }
+  .dream-home > div:first-child > div:first-child > div:first-child { height: 224px !important; min-height: 224px !important; }
   .dream-home > div:first-child > div:first-child > div:first-child > div:first-child { padding-left: 26px; }
   .dream-home > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child { width: 66% !important; }
+  .dream-home > div:first-child > div:first-child > div:first-child::after { right: 14px; width: 29%; font-size: 17px; }
   .dream-home [data-feature="game-source"] { font-size: 18px !important; }
   .dream-home [data-feature="game-source"]::after { font-size: 12px; margin-top: 10px; }
   .dream-home .group\/home-suggestions button { min-height: 114px !important; font-size: 12px !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .dream-sparkles i { animation: none !important; }
+  .dream-home .group\/home-suggestions button { transition: none !important; }
 }

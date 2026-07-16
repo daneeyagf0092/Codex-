@@ -1,4 +1,4 @@
-((cssText, artDataUrl) => {
+((cssText) => {
   const STATE_KEY = "__CODEX_DREAM_SKIN_STATE__";
   const STYLE_ID = "codex-dream-skin-style";
   const CHROME_ID = "codex-dream-skin-chrome";
@@ -8,17 +8,10 @@
   if (previous?.observer) previous.observer.disconnect();
   if (previous?.timer) clearInterval(previous.timer);
   if (previous?.scheduler?.timeout) clearTimeout(previous.scheduler.timeout);
-  const artUrl = previous?.artUrl || (() => {
-    const comma = artDataUrl.indexOf(",");
-    const binary = atob(artDataUrl.slice(comma + 1));
-    const bytes = new Uint8Array(binary.length);
-    for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
-    return URL.createObjectURL(new Blob([bytes], { type: "image/png" }));
-  })();
   const existingStyle = document.getElementById(STYLE_ID);
   if (existingStyle) {
     existingStyle.textContent = cssText;
-    existingStyle.dataset.dreamVersion = "1";
+    existingStyle.dataset.dreamVersion = "2";
   }
 
   const ensure = () => {
@@ -26,7 +19,6 @@
     const root = document.documentElement;
     if (!root) return;
     root.classList.add("codex-dream-skin");
-    root.style.setProperty("--dream-art", `url("${artUrl}")`);
 
     let style = document.getElementById(STYLE_ID);
     if (!style) {
@@ -34,9 +26,9 @@
       style.id = STYLE_ID;
       (document.head || root).appendChild(style);
     }
-    if (style.dataset.dreamVersion !== "1") {
+    if (style.dataset.dreamVersion !== "2") {
       style.textContent = cssText;
-      style.dataset.dreamVersion = "1";
+      style.dataset.dreamVersion = "2";
     }
 
     const shellMain = document.querySelector("main.main-surface") || document.querySelector("main");
@@ -55,11 +47,11 @@
       chrome.id = CHROME_ID;
       chrome.setAttribute("aria-hidden", "true");
       chrome.innerHTML = `
-        <div class="dream-brand"><span class="dream-note">♫</span><span><b>薛凯琪专属定制皮肤</b><small>Codex App 限定版 ✦</small></span></div>
-        <div class="dream-signature">Fiona Sit ♡</div>
+        <div class="dream-brand"><span class="dream-note">☄</span><span><b>灵感小宇宙</b><small>Codex Creative Mode ✦</small></span></div>
+        <div class="dream-signature">今天适合开脑洞 · 好点子 +99</div>
         <div class="dream-sparkles"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="dream-ribbon"><span>♡</span>🎀<span>✦</span></div>
-        <div class="dream-polaroid"></div>`;
+        <div class="dream-ribbon"><span>✦</span>⚡<span>灵感已启动</span></div>
+        <div class="dream-sticker">今日心情卡<br>创意 +100<br>动力 +100</div>`;
       document.body.appendChild(chrome);
     }
     const shellBox = shellMain.getBoundingClientRect();
@@ -73,7 +65,6 @@
   const cleanup = () => {
     window.__CODEX_DREAM_SKIN_DISABLED__ = true;
     document.documentElement?.classList.remove("codex-dream-skin");
-    document.documentElement?.style.removeProperty("--dream-art");
     document.querySelectorAll(".dream-home").forEach((node) => node.classList.remove("dream-home"));
     document.querySelectorAll(".dream-home-shell").forEach((node) => node.classList.remove("dream-home-shell"));
     document.getElementById(STYLE_ID)?.remove();
@@ -82,7 +73,6 @@
     state?.observer?.disconnect();
     if (state?.timer) clearInterval(state.timer);
     if (state?.scheduler?.timeout) clearTimeout(state.scheduler.timeout);
-    if (state?.artUrl) URL.revokeObjectURL(state.artUrl);
     delete window[STATE_KEY];
     return true;
   };
@@ -98,7 +88,7 @@
   const observer = new MutationObserver(scheduleEnsure);
   observer.observe(document.documentElement, { childList: true, subtree: true });
   const timer = setInterval(ensure, 5000);
-  window[STATE_KEY] = { ensure, cleanup, observer, timer, scheduler, artUrl, version: "1.0.0" };
+  window[STATE_KEY] = { ensure, cleanup, observer, timer, scheduler, version: "1.1.0" };
   ensure();
-  return { installed: true, version: "1.0.0" };
-})(__DREAM_CSS_JSON__, __DREAM_ART_JSON__)
+  return { installed: true, version: "1.1.0", theme: "inspiration-micro-universe" };
+})(__DREAM_CSS_JSON__)
